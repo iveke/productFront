@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Btn, Card, CardContainer, DescriptionText, IdText, Price, Wrap } from "./ListProduct.style";
 import { changeInfo } from "../../redux/ProductSlice";
+import LANG from "../../lang";
 
 export const ListProduct = ({ list }) => {
   const dispatch = useDispatch();
@@ -10,10 +11,10 @@ export const ListProduct = ({ list }) => {
         <Card key={id}>
           <h3>{name}</h3>
           <DescriptionText>{description}</DescriptionText>
-          <IdText>ID: {id}</IdText>
+          <IdText>{LANG.UA.LIST.CARD.ID} {id}</IdText>
           <Wrap>
           <Price>{price}$</Price>
-          <Btn onClick={()=>dispatch(changeInfo({id, name, price, description}))} to="/updateProduct">Редагувати</Btn>
+          <Btn onClick={()=>dispatch(changeInfo({id, name, price, description}))} to="/updateProduct">{LANG.UA.LIST.CARD.BUTTON.EDIT}</Btn>
           </Wrap>
 
         </Card>
