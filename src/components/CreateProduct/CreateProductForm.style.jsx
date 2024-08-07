@@ -38,5 +38,5 @@ export const Btn = styled.button`
   border: none;
   border-radius: 5px;
   color: white;
-  background-color: blue;
+  background-color: green;
 `;

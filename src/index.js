@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import GlobalStyle from "./GlobalStyle.jsx";
 import { store } from "./redux/store.js";
 import { BrowserRouter } from "react-router-dom";
-import "./lib/i18n/core.js";
+import "./lib/lang/core.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

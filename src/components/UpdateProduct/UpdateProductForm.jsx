@@ -53,13 +53,17 @@ export const UpdateProductForm = () => {
           <Form>
             <Wrap>
               <Label htmlFor="name">{LANG.UA.FORM.FORM_INFO.LABEL.NAME}</Label>
-              <Label htmlFor="price">{LANG.UA.FORM.FORM_INFO.LABEL.PRICE}</Label>
+              <Label htmlFor="price">
+                {LANG.UA.FORM.FORM_INFO.LABEL.PRICE}
+              </Label>
               <Label htmlFor="id">{LANG.UA.FORM.FORM_INFO.LABEL.ID}</Label>
               <Input name="name" type="text" />
               <Input name="price" type="number" />
               <Input name="id" disabled />
             </Wrap>
-            <Label htmlFor="description">{LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}</Label>
+            <Label htmlFor="description">
+              {LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}
+            </Label>
             <Textarea name="description" component={Textareas} />
             <BtnWrap>
               <Btn type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.EDIT}</Btn>

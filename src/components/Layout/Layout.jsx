@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { Menu, PagesLink, StyleLink } from "./Layout.style";
+import { useTranslation } from "react-i18next";
+import { i18n } from "../../lib/lang";
 import LANG from "../../lang";
 
 export const Layout = () => {
@@ -13,7 +15,6 @@ export const Layout = () => {
           <StyleLink to="/list">{LANG.UA.MENU.PAGE.PRODUCT_LIST}</StyleLink>
         </PagesLink>
       </Menu>
-
       <Outlet />
     </>
   );

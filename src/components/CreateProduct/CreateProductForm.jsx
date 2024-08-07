@@ -12,6 +12,7 @@ import { useDispatch } from "react-redux";
 import { createProduct } from "../../redux/operation";
 import * as yup from 'yup';
 import LANG from "../../lang";
+import { Button } from "../../common/button/elem.tsx";
 
 
 const validateShema = yup.object().shape({
@@ -47,7 +48,8 @@ export const CreateProductForm = () => {
           </Wrap>
           <Label htmlFor="description">{LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}</Label>
           <Textarea name="description" component={Textareas} />
-          <Btn type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE} </Btn>
+          <Button />
+          {/* <Btn type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE} </Btn> */}
         </Form>
       </FormConteiner>
     </Formik>
