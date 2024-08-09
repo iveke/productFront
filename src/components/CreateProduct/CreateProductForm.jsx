@@ -1,7 +1,7 @@
 import { Field, Formik, Form, validateYupSchema } from "formik";
 import {
   Btn,
-  FormConteiner,
+  FormContener,
   Forms,
   Input,
   Label,
@@ -10,16 +10,16 @@ import {
 } from "./CreateProductForm.style";
 import { useDispatch } from "react-redux";
 import { createProduct } from "../../redux/operation";
-import * as yup from 'yup';
+import * as yup from "yup";
 import LANG from "../../lang";
-import { Button } from "../../common/button/elem.tsx";
-
+import  {Button}  from "../../common/button/index.ts";
+import { FormContainer } from "../../common/form-container/index.ts";
 
 const validateShema = yup.object().shape({
-  name: yup.string().min(5, 'Shortly!').max(30, 'Longly').required('Required'),
-  price: yup.number().positive().required('Required'),
+  name: yup.string().min(5, "Shortly!").max(30, "Longly").required("Required"),
+  price: yup.number().positive().required("Required"),
   description: yup.string().nullable(),
-})
+});
 const initial = { name: "", price: "", description: "" };
 
 const Textareas = ({ field, form, ...props }) => {
@@ -30,14 +30,14 @@ export const CreateProductForm = () => {
   const dispatch = useDispatch();
   return (
     <Formik
-    validationSchema={validateShema}
+      validationSchema={validateShema}
       initialValues={initial}
       onSubmit={(values, { resetForm }) => {
         dispatch(createProduct(values));
         resetForm();
       }}
     >
-      <FormConteiner>
+      <FormContainer>
         <h4>{LANG.UA.FORM.INFO_ABOUT_PRODUCT}</h4>
         <Form>
           <Wrap>
@@ -46,12 +46,14 @@ export const CreateProductForm = () => {
             <Input name="name" type="text" />
             <Input name="price" type="number" />
           </Wrap>
-          <Label htmlFor="description">{LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}</Label>
+          <Label htmlFor="description">
+            {LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}
+          </Label>
           <Textarea name="description" component={Textareas} />
           <Button />
           {/* <Btn type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE} </Btn> */}
         </Form>
-      </FormConteiner>
+      </FormContainer>
     </Formik>
   );
 };
