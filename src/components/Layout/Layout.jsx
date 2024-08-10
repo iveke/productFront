@@ -9,10 +9,12 @@ export const Layout = () => {
     <>
       <Menu>
       <PagesLink>
-          <StyleLink to="/createProduct">{LANG.UA.MENU.PAGE.PRODUCT_CREATE}</StyleLink>
+          {/* <StyleLink to="/createProduct">{LANG.UA.MENU.PAGE.PRODUCT_CREATE}</StyleLink> */}
+          create
         </PagesLink>
         <PagesLink>
-          <StyleLink to="/list">{LANG.UA.MENU.PAGE.PRODUCT_LIST}</StyleLink>
+          {/* <StyleLink to="/list">{LANG.UA.MENU.PAGE.PRODUCT_LIST}</StyleLink> */}
+          list
         </PagesLink>
       </Menu>
       <Outlet />

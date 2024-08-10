@@ -11,7 +11,7 @@ import {
 import { useDispatch } from "react-redux";
 import { createProduct } from "../../redux/operation";
 import * as yup from "yup";
-import LANG from "../../lang";
+import {LANG} from "../../lang";
 import  {Button}  from "../../common/button/index.ts";
 import { FormContainer } from "../../common/form-container/index.ts";
 

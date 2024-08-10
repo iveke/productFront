@@ -1,0 +1,1 @@
+export {Elem as GridWrap} from './elem.tsx'

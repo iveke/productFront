@@ -21,7 +21,7 @@ import { changeInfo } from "../../redux/ProductSlice";
 import { selectorChangeProduct } from "../../redux/selectors";
 import { deleteProduct, updateProduct } from "../../redux/operation";
 // import { createProduct } from "../../redux/operation";
-import LANG from "../../lang";
+import {LANG} from "../../lang";
 
 const initial = { name: "", price: "", description: "" };
 

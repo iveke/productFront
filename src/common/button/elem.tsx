@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import React, { Children } from "react";
 import { ButtonStyledProps } from "./constant.ts";
-import { Text } from "../text/elem.tsx";
+// import { Text } from "../text/elem.tsx";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { BORDER_RADIUS_DATA } from "../../theme/size.ts";
 
 export const Elem: React.FC = (props) => {
   return (
     <ButtonStyled {...props}>
-      <Text />
+      {/* <Text /> */}
     </ButtonStyled>
   );
 };

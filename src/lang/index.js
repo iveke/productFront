@@ -1,7 +1,6 @@
 import { UA } from "./ua/index.js";
 
-const LANG = {
+export const LANG = {
     UA,
 }
 
-export default LANG;

@@ -3,7 +3,9 @@ import LIST from "./product-list.json";
 import MENU from "./menu-layout.json";
 
 export const UA = {
-  FORM,
-  LIST,
-  MENU,
+  translation: {
+    FORM,
+    LIST,
+    MENU,
+  }
 };
