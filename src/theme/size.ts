@@ -34,6 +34,7 @@ export enum HEIGHT_ELEMENT_ENUM {
   INPUT = "input",
   BUTTON = "button",
   TEXTAREA = "textarea",
+  MENU = "menu",
 }
 
 export const HEIGHT_ELEMENT_DATA = {
@@ -42,5 +43,10 @@ export const HEIGHT_ELEMENT_DATA = {
   [HEIGHT_ELEMENT_ENUM.INPUT]: "25px",
   [HEIGHT_ELEMENT_ENUM.BUTTON]: "30px",
   [HEIGHT_ELEMENT_ENUM.TEXTAREA]: "50px",
+  [HEIGHT_ELEMENT_ENUM.MENU]: "50px",
 };
+
+export enum FONT_SIZE_ENUM {
+  
+}
 
