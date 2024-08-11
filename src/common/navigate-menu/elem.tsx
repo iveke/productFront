@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MenuStyledProps } from "./constant.ts";
 import { HEIGHT_ELEMENT_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
-import { Spacing } from "../../theme/service.ts";
+import { Spacing } from "../../theme/index.ts";
 
 export const Elem: React.FC = (props) => {
   return <MenuStyled {...props}></MenuStyled>;

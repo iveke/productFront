@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Spacing } from "../../theme/service.ts";
+import { Spacing } from "../../theme/index.ts";
 import { FlexStyledProps } from "./constant.ts";
 
 export const Elem: React.FC<FlexStyledProps> = (props, { children }) => {

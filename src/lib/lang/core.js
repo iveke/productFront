@@ -11,7 +11,7 @@ i18n.use(initReactI18next).init({
     fallbacking: LANG_DEFAULT,
     interpolation: {
         escapeValue: false
-    }
+    },
 });
 
 export {i18n};

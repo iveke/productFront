@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { GridStyledProps } from "./constant.ts";
-import { Spacing } from "../../theme/service.ts";
+import { Spacing } from "../../theme/index.ts";
 
 export const Elem: React.FC<GridStyledProps> = (props) => {
   return <GridStyled {...props}></GridStyled>;

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Spacing } from "../../theme/service.ts";
+import { Spacing } from "../../theme/index.ts";
 import { BORDER_RADIUS_DATA, FONT_SIZE_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { LinkStyledProps } from "./constant.ts";
