@@ -1,0 +1,1 @@
+export {Elem as Card} from './elem.tsx'

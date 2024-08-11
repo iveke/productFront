@@ -19,12 +19,12 @@ export enum WIDTH_ELEMENT_ENUM {
   TEXTAREA = "textarea",
 }
 
-export const WIDTH_ELEMENT_DATE = {
+export const WIDTH_ELEMENT_DATA = {
   [WIDTH_ELEMENT_ENUM.CARD]: "300px",
   [WIDTH_ELEMENT_ENUM.FORM]: "800px",
   [WIDTH_ELEMENT_ENUM.LIST]: "1200px",
   [WIDTH_ELEMENT_ENUM.INPUT]: "380px",
-  //   [WIDTH_ELEMENT_ENUM.BUTTON]: "380px",
+  [WIDTH_ELEMENT_ENUM.BUTTON]: "380px",
   [WIDTH_ELEMENT_ENUM.TEXTAREA]: "800px",
 };
 
@@ -47,6 +47,13 @@ export const HEIGHT_ELEMENT_DATA = {
 };
 
 export enum FONT_SIZE_ENUM {
-  
+  TEXT = "text",
+  HEADER = "header",
+  LINK = "link",
 }
 
+export const FONT_SIZE_DATA = {
+  [FONT_SIZE_ENUM.TEXT]: "14px",
+  [FONT_SIZE_ENUM.HEADER]: "24px",
+  [FONT_SIZE_ENUM.LINK]: "20px",
+};

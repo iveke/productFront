@@ -11,4 +11,5 @@ export const GridStyled = styled.div<GridStyledProps>`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.column}, 1fr)` || `repeat(2, 1fr)`};
   grid-column-gap: ${(props) => props.gapColumn || Spacing(2)};
+  grid-row-gap: ${props => props.gapRow || Spacing(2)};
 `;

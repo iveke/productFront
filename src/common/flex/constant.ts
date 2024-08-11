@@ -1,5 +1,5 @@
 export interface FlexStyledProps {
-  justify: string;
-  align: string;
-  gap: string;
+  justify?: string;
+  align?: string;
+  gap?: string;
 }

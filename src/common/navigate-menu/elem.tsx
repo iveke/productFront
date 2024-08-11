@@ -5,8 +5,8 @@ import { HEIGHT_ELEMENT_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { Spacing } from "../../theme/service.ts";
 
-export const Elem: React.FC = () => {
-  return <MenuStyled></MenuStyled>;
+export const Elem: React.FC = (props) => {
+  return <MenuStyled {...props}></MenuStyled>;
 };
 
 export const MenuStyled = styled.ul<MenuStyledProps>`
