@@ -5,5 +5,5 @@ export interface FlexStyledProps {
   justify?: string;
   align?: string;
   direct?: string;
-  gap?: string;
+  gap?: number;
 }

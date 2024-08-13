@@ -15,6 +15,7 @@ export const LinkStyled = styled(NavLink)<LinkStyledProps>`
   text-decoration: none;
   font-size: ${FONT_SIZE_DATA.link};
   border-radius: ${(props) => props.radius || BORDER_RADIUS_DATA.default};
+  color: ${(props) => props.color || COLOR_DATA.white};
   &.active {
     color: ${COLOR_DATA.active};
   }

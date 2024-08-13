@@ -9,17 +9,17 @@ export const validateFormShema = yup.object().shape({
 
 export interface FormikProps {
   children?: ReactNode;
-  initialValue: {name: string, price: number, description: string | null};
+//   initialValue: { name: string; price: number; description: string | null };
   validationShema?: yup.ObjectSchema<{
     name: string;
     price: number;
     description: string | null;
   }>;
-  onSubmit: FormEventHandler;
+  onSubmit: Function;
 }
 
 export const formInitialValue = {
-    name: '',
-    price: '',
-    description: ''
-}
+  name: "",
+  price: "",
+  description: "",
+};

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { Children } from "react";
+import React, { Children, ReactNode } from "react";
 import { ButtonStyledProps } from "./constant.ts";
 // import { Text } from "../text/elem.tsx";
 import { COLOR_DATA } from "../../theme/color.ts";
@@ -9,8 +9,9 @@ import {
   WIDTH_ELEMENT_DATA,
 } from "../../theme/size.ts";
 
-export const Elem: React.FC = (props) => {
-  return <ButtonStyled {...props}>{/* <Text /> */}</ButtonStyled>;
+export const Elem: React.FC<ButtonStyledProps> = (props, ) => {
+  const {operation, children} = props;
+  return <ButtonStyled onClick={()=>operation()} {...props}>{children}</ButtonStyled>;
 };
 
 const ButtonStyled = styled.button<ButtonStyledProps>`

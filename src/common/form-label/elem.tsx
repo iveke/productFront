@@ -6,7 +6,8 @@ import { Text } from "../text/index.ts";
 export const Elem: React.FC<{children: ReactNode}> = ({ children }) => {
   return (
     <LabelStyled>
-      <Text>{children}</Text>
+      {children}
+      {/* <Text>{children}</Text> */}
     </LabelStyled>
   );
 };

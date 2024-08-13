@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { GridStyledProps } from "./constant.ts";
 import { Spacing } from "../../theme/index.ts";
 
-export const Elem: React.FC<GridStyledProps> = (props, { children }) => {
-  return <GridStyled {...props}>{children}</GridStyled>;
+export const Elem: React.FC<GridStyledProps> = (props) => {
+  console.log(props.children)
+  return <GridStyled {...props}>{props.children}</GridStyled>;
 };
 
 export const GridStyled = styled.div<GridStyledProps>`
