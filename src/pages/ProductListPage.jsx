@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getProductList } from "../redux/operation";
 import { ListProduct } from "../components/ListProduct.jsx/ListProduct";
 import { HeaderText } from "../components/BaseStyle/BaseStyle.style";
+import { List } from "../epic/product-list/index.ts";
 
 export const ProductListPage = () => {
   const list = useSelector(selectorGetList);
@@ -14,6 +15,7 @@ export const ProductListPage = () => {
 
   return (
     <>
+    <List />
       <HeaderText>Список товарів</HeaderText>
       {list.length > 0 && <ListProduct list={list} />}
     </>

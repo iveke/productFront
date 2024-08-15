@@ -18,7 +18,7 @@ import { CardItem, CardList } from "../../data/product/frame/product-item.compon
 export const ListProduct = ({ list }) => {
   const dispatch = useDispatch();
   return (
-    <CardContainer>
+    // <CardContainer>
       <GridWrap column={3}>
         {list.map(({ name, id, description, price }) => (
           <CardItem
@@ -30,7 +30,7 @@ export const ListProduct = ({ list }) => {
           />
         ))}
       </GridWrap>
-    </CardContainer>
+    // </CardContainer>
   );
 };
 
