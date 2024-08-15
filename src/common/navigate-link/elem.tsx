@@ -5,9 +5,12 @@ import { Spacing } from "../../theme/index.ts";
 import { BORDER_RADIUS_DATA, FONT_SIZE_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { LinkStyledProps } from "./constant.ts";
+import { Text } from "../text/index.ts";
 
 export const Elem: React.FC<LinkStyledProps> = (props, { path }) => {
-  return <LinkStyled to={path} {...props}></LinkStyled>;
+  return <LinkStyled to={path} {...props}>
+    <Text>{props.children}</Text>
+  </LinkStyled>;
 };
 
 export const LinkStyled = styled(NavLink)<LinkStyledProps>`

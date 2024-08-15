@@ -7,9 +7,10 @@ import {
 } from "./constant.ts";
 
 export const Elem: React.FC<FormikProps> = ({ children, onSubmit }) => {
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, values) => {
     event.preventDefault();
     console.log(event);
+
     onSubmit();
   };
   console.log(children)

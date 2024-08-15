@@ -18,25 +18,24 @@ const Elem: React.FC = () => {
     
     <Form
       onSubmit={(values, { resetForm }) => {
-        console.log(values)
-        // dispatch(createProduct(values))
+        console.log(values)    
         resetForm();
       }}
     >
-      <FormContainer gap={1}>
-        <GridWrap column={3}>
+      <FormContainer >
+        <GridWrap column={2}>
           <FlexWrap align="none" justify="start">
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.NAME}</Label>
-            <Input />
+            <Input name="name" type="text"/>
           </FlexWrap>
           <FlexWrap align="none" justify="start">
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.PRICE}</Label>
-            <Input />
+            <Input name="price" type="number"/>
           </FlexWrap>
         </GridWrap>
         <FlexWrap align="none" justify="start">
           <Label>{LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}</Label>
-          <Textarea />
+          <Textarea name="description"/>
         </FlexWrap>
         <Button type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE}</Button>
       </FormContainer>

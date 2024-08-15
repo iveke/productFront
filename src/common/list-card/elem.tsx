@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import {
   BORDER_RADIUS_DATA,
@@ -9,8 +9,8 @@ import { COLOR_DATA } from "../../theme/color.ts";
 import { CardStyledProps } from "./constant.ts";
 import { Spacing } from "../../theme/service.ts";
 
-export const Elem: React.FC = (props) => {
-  return <CardStyled {...props}></CardStyled>;
+export const Elem: React.FC<{children: ReactNode}> = (props) => {
+  return <CardStyled {...props}>{props.children}</CardStyled>;
 };
 
 export const CardStyled = styled.li<CardStyledProps>`

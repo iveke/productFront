@@ -9,8 +9,8 @@ export const Layout = () => {
   return (
     <>
       <Menu>
-        <Link to="createProduct">create</Link>
-        <Link to="list">list</Link>
+        <Link path="createProduct">Create</Link>
+        <Link path="list">List</Link>
       </Menu>
       <Outlet />
     </>

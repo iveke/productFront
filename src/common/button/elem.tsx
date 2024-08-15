@@ -8,10 +8,11 @@ import {
   HEIGHT_ELEMENT_DATA,
   WIDTH_ELEMENT_DATA,
 } from "../../theme/size.ts";
+import { useDispatch } from "react-redux";
 
-export const Elem: React.FC<ButtonStyledProps> = (props, ) => {
-  const {operation, children} = props;
-  return <ButtonStyled onClick={()=>operation()} {...props}>{children}</ButtonStyled>;
+export const Elem: React.FC<ButtonStyledProps> = (props ) => {
+  const {operation, children, type} = props;
+  return <ButtonStyled type={type}  {...props}>{children}</ButtonStyled>;
 };
 
 const ButtonStyled = styled.button<ButtonStyledProps>`

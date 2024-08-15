@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { HEIGHT_ELEMENT_DATA, WIDTH_ELEMENT_DATA } from "../../theme/size.ts";
 import { TextareaStyledProps } from "./constant.ts";
+import { Field } from "formik";
 
-export const Elem: React.FC = (props) => {
-  return <TextareaStyled {...props}></TextareaStyled>;
+export const Elem: React.FC<{type?: string, name: string, value?: string;}> = (props) => {
+  return <Field component={CustomField} {...props}></Field>;
 };
 
 const TextareaStyled = styled.textarea<TextareaStyledProps>`
@@ -12,3 +13,5 @@ const TextareaStyled = styled.textarea<TextareaStyledProps>`
   height: ${(props) => props.height || HEIGHT_ELEMENT_DATA.textarea};
   resize: none;
 `;
+
+const CustomField = (props) => (<TextareaStyled {...props} />)

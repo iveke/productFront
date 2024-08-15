@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 
 export interface ButtonStyledProps {
   children: ReactNode;
-  operation: Function;
+  operation?: Function;
+  type?: string;
   width?: string;
   height?: string;
   delete?: boolean;
