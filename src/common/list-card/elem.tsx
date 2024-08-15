@@ -10,6 +10,8 @@ import { CardStyledProps } from "./constant.ts";
 import { Spacing } from "../../theme/service.ts";
 
 export const Elem: React.FC<{children: ReactNode}> = (props) => {
+  console.log(props)
+  console.log("you in card")
   return <CardStyled {...props}>{props.children}</CardStyled>;
 };
 
@@ -19,4 +21,5 @@ export const CardStyled = styled.li<CardStyledProps>`
   height: ${(props) => props.height || HEIGHT_ELEMENT_DATA.card};
   border-radius: ${BORDER_RADIUS_DATA.default};
   box-shadow: 0 0 50px ${COLOR_DATA.shadow};
+  list-style: none;
 `;
