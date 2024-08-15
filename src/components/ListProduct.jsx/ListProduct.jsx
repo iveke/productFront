@@ -17,7 +17,6 @@ import { CardItem, CardList } from "../../data/product/frame/product-item.compon
 
 export const ListProduct = ({ list }) => {
   const dispatch = useDispatch();
-  console.log(list)
   return (
     <CardContainer>
       <GridWrap column={3}>

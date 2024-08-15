@@ -10,8 +10,6 @@ import { CardStyledProps } from "./constant.ts";
 import { Spacing } from "../../theme/service.ts";
 
 export const Elem: React.FC<{children: ReactNode}> = (props) => {
-  console.log(props)
-  console.log("you in card")
   return <CardStyled {...props}>{props.children}</CardStyled>;
 };
 

@@ -8,7 +8,6 @@ import { LinkStyledProps } from "./constant.ts";
 import { Text } from "../text/index.ts";
 
 export const Elem: React.FC<LinkStyledProps> = (props, { path }) => {
-  console.log(props, path)
   return <LinkStyled {...props}>
   </LinkStyled>;
 };

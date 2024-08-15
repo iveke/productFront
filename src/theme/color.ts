@@ -6,7 +6,8 @@ export enum COLOR_ENUM {
   GREEN = "green",
   SHADOW = "shadow",
   LABEL = "label",
-  ACTIVE = 'active'
+  ACTIVE = 'active',
+  ID = 'id'
 }
 
 export const COLOR_DATA = {
@@ -17,5 +18,6 @@ export const COLOR_DATA = {
   [COLOR_ENUM.GREEN]: "#080",
   [COLOR_ENUM.SHADOW]: "#cacfc4",
   [COLOR_ENUM.LABEL]: "#838383",
-  [COLOR_ENUM.ACTIVE]: "#050344 "
+  [COLOR_ENUM.ACTIVE]: "#050344 ",
+[COLOR_ENUM.ID]: "#8698A6"
 };

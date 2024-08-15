@@ -14,7 +14,6 @@ export const Elem: React.FC<FormContainerStyledProps> = (
   { children },
   props
 ) => {
-  console.log(children);
   return <FormContainerStyled {...props}>{children}</FormContainerStyled>;
 };
 

@@ -9,8 +9,8 @@ export const Elem: React.FC<FlexStyledProps> = (props) => {
 
 export const FlexStyled = styled.div<FlexStyledProps>`
   display: flex;
-  justify-content: ${(props) => props.justify || "center"};
-  align-items: ${(props) => props.align || "center"};
+  justify-content: ${(props) => props.justify || "none"};
+  align-items: ${(props) => props.align || "none"};
   flex-direction: ${props => props.direct || "column"};
   gap: ${(props) => props.gap ? Spacing(props.gap) : 'none'};
 `;
