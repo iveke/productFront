@@ -9,11 +9,12 @@ import { COLOR_DATA } from "../../theme/color.ts";
 import { CardStyledProps } from "./constant.ts";
 import { Spacing } from "../../theme/service.ts";
 
-export const Elem: React.FC<{children: ReactNode}> = (props) => {
+export const Elem: React.FC<{ children: ReactNode }> = (props) => {
   return <CardStyled {...props}>{props.children}</CardStyled>;
 };
 
 export const CardStyled = styled.li<CardStyledProps>`
+  margin: 0 auto;
   padding: ${Spacing(3)};
   width: ${(props) => props.width || WIDTH_ELEMENT_DATA.card};
   height: ${(props) => props.height || HEIGHT_ELEMENT_DATA.card};

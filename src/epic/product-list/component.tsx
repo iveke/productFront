@@ -7,8 +7,7 @@ import { COLOR_DATA } from "../../theme/color.ts";
 import { FONT_SIZE_DATA } from "../../theme/size.ts";
 export const Component: React.FC<{list: any}> = ({ list }) => {
   return (
-    <div>
-      <Text color={COLOR_DATA.blue} font={FONT_SIZE_DATA.header} weight="bold" >Список товарів</Text>
+    <>
       <ListContainer>
         <GridWrap column={3}>
           {list.length > 0 &&
@@ -23,12 +22,11 @@ export const Component: React.FC<{list: any}> = ({ list }) => {
             ))}
         </GridWrap>
       </ListContainer>
-    </div>
+    </>
   );
 };
 
 const ListContainer = styled.ul`
   margin: 0 auto;
-  padding: 20px;
-  width: 100vw;
+  padding: 20px;  
 `;
