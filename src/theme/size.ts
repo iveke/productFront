@@ -50,10 +50,12 @@ export enum FONT_SIZE_ENUM {
   TEXT = "text",
   HEADER = "header",
   LINK = "link",
+  MINIHEADER = "miniheader",
 }
 
 export const FONT_SIZE_DATA = {
   [FONT_SIZE_ENUM.TEXT]: "14px",
   [FONT_SIZE_ENUM.HEADER]: "24px",
   [FONT_SIZE_ENUM.LINK]: "20px",
+  [FONT_SIZE_ENUM.MINIHEADER]: "18px",
 };
