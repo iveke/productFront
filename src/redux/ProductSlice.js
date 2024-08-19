@@ -10,6 +10,7 @@ const productSlice = createSlice({
   name: "product",
   initialState: {
     list: [],
+    createProduct: {name: "", price: 0, description: ""},
     changeProduct: { id: "", name: "", price: "", description: "" },
     changing: false,
   },
@@ -17,6 +18,9 @@ const productSlice = createSlice({
     changeInfo(state, action) {
       return { ...state, changeProduct: action.payload, changing:true };
     },
+    createProductInfo(state, action){
+      return {...state, createProduct: action.payload}
+    }
   },
   extraReducers: (builder) =>
     builder
@@ -36,5 +40,5 @@ const productSlice = createSlice({
       })
 });
 
-export const { changeInfo } = productSlice.actions;
+export const { changeInfo, createProductInfo } = productSlice.actions;
 export const productReducer = productSlice.reducer;

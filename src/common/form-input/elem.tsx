@@ -3,9 +3,12 @@ import styled from "styled-components";
 import { HEIGHT_ELEMENT_DATA, WIDTH_ELEMENT_DATA } from "../../theme/size.ts";
 import { Field } from "formik";
 
-export const Elem: React.FC<{ name: string; value?: string; type?: string }> = (
-  props
-) => {
+export const Elem: React.FC<{
+  name: string;
+  value?: string;
+  type?: string;
+  disabled?: boolean;
+}> = (props) => {
   return <InputStyled {...props}></InputStyled>;
 };
 

@@ -32,7 +32,7 @@ const Elem: React.FC<{
           </Text>
           <Link
             to="/updateProduct"
-            color={COLOR_DATA.black}
+            color={COLOR_DATA.blue}
             onClick={() =>
               dispatch(changeInfo({ id, name, price, description }))
             }

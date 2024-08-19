@@ -7,24 +7,20 @@ export const validateFormShema = yup.object().shape({
   description: yup.string().nullable(),
 });
 
-export interface FormikProps {
-  children?: ReactNode;
-//   initialValue: { name: string; price: number; description: string | null };
-  validationShema?: yup.ObjectSchema<{
-    name: string;
-    price: number;
-    description: string | null;
-  }>;
-  onSubmit: Function;
-}
 
-export enum INITIAL_VALUE_ENUM{
+export enum FORM_VALUE_ENUM{
     NAME ="name",
     PRICE = "price",
     DESCRIPTION = "description"
 }
 export const INITIAL_VALUE_DATA ={
-[INITIAL_VALUE_ENUM.NAME]: "",
-[INITIAL_VALUE_ENUM.PRICE]: "",
-[INITIAL_VALUE_ENUM.DESCRIPTION]: "",
+[FORM_VALUE_ENUM.NAME]: "",
+[FORM_VALUE_ENUM.PRICE]: 0,
+[FORM_VALUE_ENUM.DESCRIPTION]: "",
+}
+
+export interface FORM_VALUE{
+name: string;
+price: number; 
+description: string | null;
 }
