@@ -8,9 +8,9 @@ export const CreateProductPage = () => {
   return (
     <>
     <HeaderText>Створеня товару</HeaderText>
-      <CreateProductForm />
+      {/* <CreateProductForm /> */}
       {/* <CreateForm /> */}
-      <CreateForm></CreateForm>
+      <CreateForm />
     </>
   );
 };

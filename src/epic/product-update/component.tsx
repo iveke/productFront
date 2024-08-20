@@ -15,16 +15,21 @@ import { FONT_SIZE_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { changeInfo } from "../../redux/ProductSlice.js";
 
-export const Component: React.FC<ComponentProps> = ({ productChangeInfo, dispatch, mutation }) => {
+export const Component: React.FC<ComponentProps> = ({
+  productChangeInfo,
+  dispatch,
+  mutation,
+  mutationDel,
+}) => {
+  const handleDelete = () => mutationDel.mutate(productChangeInfo.id);
   return (
     <Formik
       initialValues={productChangeInfo}
       validationSchema={validateFormShema}
       onSubmit={(values, { resetForm }) => {
         console.log(values);
-mutation.mutate({data: {id: productChangeInfo.id, values}})
-        dispatch(changeInfo(INITIAL_VALUE_DATA))
-        // mutation.mutate(values);
+        mutation.mutate(values);
+        dispatch(changeInfo(INITIAL_VALUE_DATA));
         resetForm();
       }}
     >
@@ -39,15 +44,15 @@ mutation.mutate({data: {id: productChangeInfo.id, values}})
         <GridWrap column={3}>
           <FlexWrap align="none" justify="start">
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.NAME}</Label>
-            <Input name="name" type="text" />
+            <Input width="250px" name="name" type="text" />
           </FlexWrap>
           <FlexWrap align="none" justify="start">
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.PRICE}</Label>
-            <Input name="price" type="number" />
+            <Input width="250px" name="price" type="number" />
           </FlexWrap>
           <FlexWrap align="none" justify="start">
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.ID}</Label>
-            <Input name="id" disabled />
+            <Input width="250px" name="id" disabled />
           </FlexWrap>
         </GridWrap>
         <FlexWrap align="none" justify="start">
@@ -56,7 +61,9 @@ mutation.mutate({data: {id: productChangeInfo.id, values}})
         </FlexWrap>
         <GridWrap column={2}>
           <Button type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.EDIT}</Button>
-          <Button type="button">{LANG.UA.FORM.FORM_INFO.BUTTON.DELETE}</Button>
+          <Button operation={handleDelete} type="button">
+            {LANG.UA.FORM.FORM_INFO.BUTTON.DELETE}
+          </Button>
         </GridWrap>
       </FormContainer>
     </Formik>

@@ -20,6 +20,7 @@ export const INITIAL_VALUE_DATA = {
 };
 
 export interface FORM_VALUE {
+  id?: string;
   name: string;
   price: number;
   description: string | null;
@@ -33,5 +34,16 @@ export interface ComponentProps {
     id: string;
   };
   dispatch: Dispatch;
-  mutation: UseMutationResult<ProductAnswerPromise[], unknown, FORM_VALUE, unknown>
+  mutation: UseMutationResult<
+    ProductAnswerPromise,
+    unknown,
+    FORM_VALUE,
+    unknown
+  >;
+  mutationDel: UseMutationResult<
+  ProductAnswerPromise,
+  unknown,
+  string,
+  unknown
+>;
 }

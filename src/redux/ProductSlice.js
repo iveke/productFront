@@ -18,6 +18,9 @@ const productSlice = createSlice({
     changeInfo(state, action) {
       return { ...state, changeProduct: action.payload, changing:true };
     },
+    changingSwitch(state, action){
+      return {...state, changing: action.payload}
+    },
     createProductInfo(state, action){
       return {...state, createProduct: action.payload}
     }
@@ -40,5 +43,5 @@ const productSlice = createSlice({
       })
 });
 
-export const { changeInfo, createProductInfo } = productSlice.actions;
+export const { changeInfo, createProductInfo, changingSwitch } = productSlice.actions;
 export const productReducer = productSlice.reducer;

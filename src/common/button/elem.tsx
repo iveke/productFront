@@ -10,9 +10,17 @@ import {
 } from "../../theme/size.ts";
 import { useDispatch } from "react-redux";
 
-export const Elem: React.FC<ButtonStyledProps> = (props ) => {
-  const {operation, children, type} = props;
-  return <ButtonStyled type={type}  {...props}>{children}</ButtonStyled>;
+export const Elem: React.FC<ButtonStyledProps> = (props) => {
+  const { operation, children, type } = props;
+  return (
+    <ButtonStyled
+      type={type}
+      onClick={() => (operation ? operation() : console.log("sorry"))}
+      {...props}
+    >
+      {children}
+    </ButtonStyled>
+  );
 };
 
 const ButtonStyled = styled.button<ButtonStyledProps>`

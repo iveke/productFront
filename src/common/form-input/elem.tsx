@@ -8,6 +8,8 @@ export const Elem: React.FC<{
   value?: string;
   type?: string;
   disabled?: boolean;
+  width?: string;
+  height?: string;
 }> = (props) => {
   return <InputStyled {...props}></InputStyled>;
 };
