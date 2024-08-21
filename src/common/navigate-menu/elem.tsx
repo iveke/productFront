@@ -1,12 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { MenuStyledProps } from "./constant.ts";
 import { HEIGHT_ELEMENT_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { Spacing } from "../../theme/index.ts";
 
-export const Elem: React.FC = (props) => {
-  return <MenuStyled {...props}></MenuStyled>;
+export const Elem: React.FC<{children?: ReactNode}> = (props) => {
+  const {children} = props;
+  return <MenuStyled {...props}>{children}</MenuStyled>;
 };
 
 export const MenuStyled = styled.ul<MenuStyledProps>`
