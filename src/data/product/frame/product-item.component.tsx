@@ -9,6 +9,7 @@ import { changeInfo } from "../../../redux/ProductSlice.js";
 import { Link } from "../../../common/navigate-link/index.ts";
 import { COLOR_DATA } from "../../../theme/color.ts";
 import { FlexWrap } from "../../../common/flex/index.ts";
+import { UPDATE_PAGE_PATH } from "../../../page/product-update/index.ts";
 
 const Elem: React.FC<{
   name: string;
@@ -31,7 +32,7 @@ const Elem: React.FC<{
             {price}$
           </Text>
           <Link
-            to="/updateProduct"
+            to={UPDATE_PAGE_PATH}
             color={COLOR_DATA.blue}
             onClick={() =>
               dispatch(changeInfo({ id, name, price, description }))

@@ -34,6 +34,7 @@ export const Component: React.FC<ComponentProps> = ({
       }}
     >
       <FormContainer>
+        <FlexWrap gap={3}>
         <Text
           color={COLOR_DATA.black}
           weight="bold"
@@ -61,10 +62,11 @@ export const Component: React.FC<ComponentProps> = ({
         </FlexWrap>
         <GridWrap column={2}>
           <Button type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.EDIT}</Button>
-          <Button operation={handleDelete} type="button">
+          <Button operation={handleDelete} type="button" delete>
             {LANG.UA.FORM.FORM_INFO.BUTTON.DELETE}
           </Button>
         </GridWrap>
+        </FlexWrap>
       </FormContainer>
     </Formik>
   );

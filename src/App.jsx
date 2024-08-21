@@ -16,7 +16,9 @@ function App() {
           <Route path={LIST_PAGE_PATH} element={<ListPage />} />
           <Route
             path={UPDATE_PAGE_PATH}
-            element={<BoundingRoute redirect={LIST_PAGE_PATH} component={UpdatePage} />}
+            element={
+              <BoundingRoute redirect={LIST_PAGE_PATH} component={UpdatePage} />
+            }
           />
         </Route>
       </Routes>

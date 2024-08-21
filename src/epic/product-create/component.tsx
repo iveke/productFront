@@ -32,6 +32,7 @@ export const Component: React.FC<{
         }}
       >
         <FormContainer>
+          <FlexWrap gap={3}>
           <Text
             color={COLOR_DATA.black}
             weight="bold"
@@ -53,7 +54,8 @@ export const Component: React.FC<{
             <Label>{LANG.UA.FORM.FORM_INFO.LABEL.DESCRIPTION}</Label>
             <Textarea name="description" type="text" />
           </FlexWrap>
-          <Button type="submit">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE}</Button>
+          <Button type="submit" width="100%">{LANG.UA.FORM.FORM_INFO.BUTTON.CREATE}</Button>
+          </FlexWrap>
         </FormContainer>
       </Formik>
     </>
