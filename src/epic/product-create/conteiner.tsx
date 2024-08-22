@@ -8,14 +8,17 @@ import { FORM_VALUE } from "./constant.ts";
 
 export const Container = () => {
   const createProductInfo = useSelector(selectorCreateProduct);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // const { data, isError } = useQuery(
   //   QUERY_KEY_DATA.create,
   //   () => createProduct(createProductInfo),
   //   { keepPreviousData: true, refetchOnWindowFocus: false }
   // );
   const mutation = useMutation((values: FORM_VALUE) => createProduct(values));
+  const handleSubmit = (values, { resetForm }) => {
+    mutation.mutate(values);
+    resetForm();
+  };
 
-
-  return <Component mutation={mutation}/>;
+  return <Component handleSubmit={handleSubmit} />;
 };

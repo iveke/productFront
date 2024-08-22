@@ -2,7 +2,7 @@ import React from "react";
 import { FormContainer } from "../../common/form-container/index.ts";
 import { Formik } from "formik";
 import { INITIAL_VALUE_DATA } from "../product-create/constant.ts";
-import { ComponentProps, validateFormShema } from "./constant.ts";
+import { ComponentProps } from "./constant.ts";
 import { Text } from "../../common/text/index.ts";
 import { LANG } from "../../lang/index.js";
 import { GridWrap } from "../../common/grid/index.ts";
@@ -14,24 +14,18 @@ import { Button } from "../../common/button/index.ts";
 import { FONT_SIZE_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { changeInfo } from "../../redux/ProductSlice.js";
+import { validateFormShema } from "./validation.ts";
 
 export const Component: React.FC<ComponentProps> = ({
   productChangeInfo,
-  dispatch,
-  mutation,
-  mutationDel,
+  handleSubmit,
+  handleDelete
 }) => {
-  const handleDelete = () => mutationDel.mutate(productChangeInfo.id);
   return (
     <Formik
       initialValues={productChangeInfo}
       validationSchema={validateFormShema}
-      onSubmit={(values, { resetForm }) => {
-        console.log(values);
-        mutation.mutate(values);
-        dispatch(changeInfo(INITIAL_VALUE_DATA));
-        resetForm();
-      }}
+      onSubmit={handleSubmit}
     >
       <FormContainer>
         <FlexWrap gap={3}>

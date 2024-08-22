@@ -1,15 +1,14 @@
 import axios from "axios";
 import {
-  AXIOS_URL_DATA,
   ProductAnswerPromise,
 } from "../../lib/axios/constant.ts";
-import { FORM_VALUE } from "./constant.ts";
+import { AXIOS_URL_DATA, FORM_VALUE } from "./constant.ts";
 
 export const updateProduct = async (
   data: FORM_VALUE
 ): Promise<ProductAnswerPromise> => {
   const { name, price, description, id } = data;
-  const res = await axios.patch(`${AXIOS_URL_DATA.update}${id}`, {
+  const res = await axios.patch(`${AXIOS_URL_DATA}${id}`, {
     name,
     price,
     description,

@@ -1,13 +1,17 @@
 import React from "react";
-import { Text } from "../../common/text/index.ts";
 import styled from "styled-components";
 import { GridWrap } from "../../common/grid/index.ts";
 import { CardItem } from "../../data/product/frame/product-item.component.tsx";
-import { COLOR_DATA } from "../../theme/color.ts";
-import { FONT_SIZE_DATA } from "../../theme/size.ts";
-export const Component: React.FC<{list: any}> = ({ list }) => {
+import { ComponentProps } from "./constant.ts";
+export const Component: React.FC<ComponentProps> = ({
+  list,
+  isLoading,
+  isError,
+}) => {
   return (
     <>
+      {isLoading && <h3> Loading...</h3>}
+      {isError && <h3>Sorry you have Error</h3>}
       <ListContainer>
         <GridWrap column={3}>
           {list.length > 0 &&
@@ -28,5 +32,5 @@ export const Component: React.FC<{list: any}> = ({ list }) => {
 
 const ListContainer = styled.ul`
   margin: 0 auto;
-  padding: 20px;  
+  padding: 20px;
 `;
