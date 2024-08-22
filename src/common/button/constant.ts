@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface ButtonStyledProps {
   children: ReactNode;
-  operation?: Function;
+  operation?: (() => void) | undefined;
   type?: string;
   width?: string;
   height?: string;

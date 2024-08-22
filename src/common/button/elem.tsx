@@ -15,7 +15,7 @@ export const Elem: React.FC<ButtonStyledProps> = (props) => {
   return (
     <ButtonStyled
       type={type}
-      onClick={() => (operation ? operation() : console.log("sorry"))}
+      onClick={() => operation?.()}
       {...props}
     >
       {children}

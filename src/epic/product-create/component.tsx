@@ -12,7 +12,6 @@ import { Button } from "../../common/button/index.ts";
 import { Text } from "../../common/text/index.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
 import { FONT_SIZE_DATA } from "../../theme/size.ts";
-import { createProductInfo } from "../../redux/ProductSlice.js";
 import { Dispatch } from "@reduxjs/toolkit";
 import { UseMutationResult } from "react-query";
 import { ProductAnswerPromise } from "../../lib/axios/constant.ts";

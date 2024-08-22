@@ -49,3 +49,5 @@ handleSubmit: (
   ) => void | Promise<any>;
   handleDelete: () => void;
 }
+
+export const selectorChangeProduct = (state) => state.product.changeProduct;

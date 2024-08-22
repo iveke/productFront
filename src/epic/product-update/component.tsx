@@ -13,7 +13,6 @@ import { Textarea } from "../../common/form-textarea/index.ts";
 import { Button } from "../../common/button/index.ts";
 import { FONT_SIZE_DATA } from "../../theme/size.ts";
 import { COLOR_DATA } from "../../theme/color.ts";
-import { changeInfo } from "../../redux/ProductSlice.js";
 import { validateFormShema } from "./validation.ts";
 
 export const Component: React.FC<ComponentProps> = ({

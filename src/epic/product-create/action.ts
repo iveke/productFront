@@ -8,6 +8,5 @@ import { AXIOS_URL_DATA } from "./constant.ts";
 
     export const createProduct = async (data): Promise<ProductAnswerPromise[]> => {
     const res = await axios.post(AXIOS_URL_DATA, data);
-    console.log(res);
     return res.data;
     };

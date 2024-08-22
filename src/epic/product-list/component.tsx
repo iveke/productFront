@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { GridWrap } from "../../common/grid/index.ts";
 import { CardItem } from "../../data/product/frame/product-item.component.tsx";
 import { ComponentProps } from "./constant.ts";
+import { UNSAFE_DataRouterContext } from "react-router-dom";
 export const Component: React.FC<ComponentProps> = ({
   list,
   isLoading,
@@ -14,7 +15,8 @@ export const Component: React.FC<ComponentProps> = ({
       {isError && <h3>Sorry you have Error</h3>}
       <ListContainer>
         <GridWrap column={3}>
-          {list.length > 0 &&
+          {list &&
+            list.length > 0 &&
             list.map(({ id, name, price, description }) => (
               <CardItem
                 key={id}

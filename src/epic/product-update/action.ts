@@ -13,13 +13,11 @@ export const updateProduct = async (
     price,
     description,
   });
-  console.log(res);
   return res.data;
 };
 
 
 export const deleteProduct = async (id: string): Promise<ProductAnswerPromise> => {
     const res = await axios.delete(`/${id}`);
-    console.log(res)
     return res.data;
 }
